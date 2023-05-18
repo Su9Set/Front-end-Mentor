@@ -1,0 +1,19 @@
+.attribution{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.attributiona{
+    color: hsl(228, 45%, 44%);
+    font-weight: 400;
+    text-align: center;
+}
+
+.qr{
+    text-align: center;
+}
+
+img{
+    border-radius: 5%;
+}
