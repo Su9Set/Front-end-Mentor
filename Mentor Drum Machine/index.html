@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -40,32 +40,34 @@
         audio.play();
       }
       window.document.onkeyup = function(event) {
-        let keystroke = event.key
-        if (keystroke === "q" || keystroke === "Q") {
+        let keystroke = event.key.toLowerCase()
+        if (keystroke === "q") {
+        }
+        if (keystroke === "q") {
             play("Q");
         }
-        else if (keystroke === "w" || keystroke === "W") {
+        else if (keystroke === "w") {
             play("W");
         }
-        else if (keystroke === "e" || keystroke === "E") {
+        else if (keystroke === "e") {
             play("E");
         }
-        else if (keystroke === "a" || keystroke === "A") {
+        else if (keystroke === "a") {
             play("A");
         }
-        else if (keystroke === "s" || keystroke === "S") {
+        else if (keystroke === "s") {
             play("S");
         }
-        else if (keystroke === "d" || keystroke === "D") {
+        else if (keystroke === "d") {
             play("D");
         }
-        else if (keystroke === "z" || keystroke === "Z") {
+        else if (keystroke === "z") {
             play("Z");
         }
-        else if (keystroke === "x" || keystroke === "X") {
+        else if (keystroke === "x") {
             play("X");
         }
-        else if (keystroke === "c" || keystroke === "C") {
+        else if (keystroke === "c") {
             play("C");
         }
     }
