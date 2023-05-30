@@ -7,69 +7,44 @@
 
     <script>
       function play(str) {
+        document.getElementById('display').innerText = str.toUpperCase();
+        let display = str.toLowerCase();
 
-        if (str === "q" || str === "Q") {
-            document.getElementById('display').innerText = "Q";
-        }
-        else if (str === "w" || str === "W") {
-            document.getElementById('display').innerText = "W";
-        }
-        else if (str === "e" || str === "E") {
-            document.getElementById('display').innerText = "E";
-        }
-        else if (str === "a" || str === "A") {
-            document.getElementById('display').innerText = "A";
-        }
-        else if (str === "s" || str === "S") {
-            document.getElementById('display').innerText = "S";
-        }
-        else if (str === "d" || str === "D") {
-            document.getElementById('display').innerText = "D";
-        }
-        else if (str === "z" || str === "Z") {
-            document.getElementById('display').innerText = "Z";
-        }
-        else if (str === "x" || str === "X") {
-            document.getElementById('display').innerText = "X";
-        }
-        else if (str === "c" || str === "C") {
-            document.getElementById('display').innerText = "C";
-        }
+        (str === "q");
+        (str === "w");
+        (str === "e");
+        (str === "a");
+        (str === "s");
+        (str === "d");
+        (str === "z");
+        (str === "x");
+        (str === "c");
 
         var audio = document.getElementById(str);
         audio.play();
       }
       window.document.onkeyup = function(event) {
-        let keystroke = event.key.toLowerCase()
-        if (keystroke === "q") {
-        }
-        if (keystroke === "q") {
+        let keystroke = event.key.toLowerCase();
+
+        if (keystroke === "q")
             play("Q");
-        }
-        else if (keystroke === "w") {
+        else if (keystroke === "w")
             play("W");
-        }
-        else if (keystroke === "e") {
+        else if (keystroke === "e")
             play("E");
-        }
-        else if (keystroke === "a") {
+        else if (keystroke === "a")
             play("A");
-        }
-        else if (keystroke === "s") {
+        else if (keystroke === "s")
             play("S");
-        }
-        else if (keystroke === "d") {
+        else if (keystroke === "d")
             play("D");
-        }
-        else if (keystroke === "z") {
+        else if (keystroke === "z")
             play("Z");
-        }
-        else if (keystroke === "x") {
+        else if (keystroke === "x")
             play("X");
-        }
-        else if (keystroke === "c") {
+        else if (keystroke === "c")
             play("C");
-        }
+
     }
     </script>
   </head>
