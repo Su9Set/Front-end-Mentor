@@ -27,6 +27,11 @@
     padding: 8px 16px;
     font-size: 16px;
 }
+.btn:hover{
+    border: 5px solid black;
+    background: white;
+    color: black;
+}
 body{
     background: url(background/barabany_barabannaia_ustanovka_muzykalnyj_instrument_121556_1920x1080.jpg);
 }
