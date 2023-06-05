@@ -6,6 +6,8 @@
     <title>Drum Machine</title>
 
     <script>
+      const button = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c']
+
       function play(str) {
         document.getElementById('display').innerText = str.toUpperCase();
         let display = str.toLowerCase();
@@ -20,30 +22,15 @@
         (str === "x");
         (str === "c");
 
-        var audio = document.getElementById(str);
-        audio.play();
+        var audio = document.querySelectorAll('[data-key]');
+        audio.forEach(b => b.play());
       }
       window.document.onkeyup = function(event) {
         let keystroke = event.key.toLowerCase();
 
-        if (keystroke === "q")
-            play("Q");
-        else if (keystroke === "w")
-            play("W");
-        else if (keystroke === "e")
-            play("E");
-        else if (keystroke === "a")
-            play("A");
-        else if (keystroke === "s")
-            play("S");
-        else if (keystroke === "d")
-            play("D");
-        else if (keystroke === "z")
-            play("Z");
-        else if (keystroke === "x")
-            play("X");
-        else if (keystroke === "c")
-            play("C");
+        if (button.includes(keystroke)){
+            play(keystroke);
+        }
 
     }
     </script>
@@ -57,39 +44,39 @@
     <div onclick="play('Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C')">
     <button class="btn">
         Q
-    <audio src="./clip/barabannaya-drob-vo-vremya-voennogo-marsha.mp3" id="Q"></audio>
+    <audio src="./clip/barabannaya-drob-vo-vremya-voennogo-marsha.mp3" id="q" data-key="q"></audio>
     </button>
     <button class="btn">
         W
-    <audio src="./clip/barabannyy-zvuk-dlya-otlichnoy-shutki.mp3" id="W"></audio>
+    <audio src="./clip/barabannyy-zvuk-dlya-otlichnoy-shutki.mp3" id="W" data-key="w"></audio>
     </button>
     <button class="btn">
         E
-    <audio src="./clip/bystraya-igra-na-barabane.mp3" id="E"></audio>
+    <audio src="./clip/bystraya-igra-na-barabane.mp3" id="E" data-key="e"></audio>
     </button>
     <button class="btn">
         A
-    <audio src="./clip/korotkiy-zvuk-barabannaya-drob.mp3" id="A"></audio>
+    <audio src="./clip/korotkiy-zvuk-barabannaya-drob.mp3" id="A" data-key="a"></audio>
     </button>
     <button class="btn">
         S
-    <audio src="./clip/melodiya-s-pionerskim-barabanom.mp3" id="S"></audio>
+    <audio src="./clip/melodiya-s-pionerskim-barabanom.mp3" id="S" data-key="s"></audio>
     </button>
     <button class="btn">
         D
-    <audio src="./clip/zvuk-barabannoy-drobi-v-cirke-pered-vystupleniem.mp3" id="D"></audio>
+    <audio src="./clip/zvuk-barabannoy-drobi-v-cirke-pered-vystupleniem.mp3" id="D" data-key="d"></audio>
     </button>
     <button class="btn">
         Z
-    <audio src="./clip/zvuk-barabanov-vo-vremya-parada.mp3" id="Z"></audio>
+    <audio src="./clip/zvuk-barabanov-vo-vremya-parada.mp3" id="Z" data-key="z"></audio>
     </button>
     <button class="btn">
         X
-    <audio src="./clip/zvuk-boevogo-barabana-melodiya-pered-atakoy.mp3" id="X"></audio>
+    <audio src="./clip/zvuk-boevogo-barabana-melodiya-pered-atakoy.mp3" id="X" data-key="x"></audio>
     </button>
     <button class="btn">
         C
-    <audio src="./clip/zvuk-odinochnogo-udara-po-barabanu.mp3" id="C"></audio>
+    <audio src="./clip/zvuk-odinochnogo-udara-po-barabanu.mp3" id="C" data-key="c"></audio>
     </button>
     </div>
    </div>
