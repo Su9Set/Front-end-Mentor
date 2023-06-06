@@ -8,28 +8,22 @@
     <script>
       const button = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c']
 
-      function play(str) {
-        document.getElementById('display').innerText = str.toUpperCase();
-        let display = str.toLowerCase();
+      function play(pressedKey) {
+        document.querySelector('.last-used-key').innerText = pressedKey.toUpperCase();
+        let formattedPressedKey = pressedKey.toLowerCase();
 
-        (str === "q");
-        (str === "w");
-        (str === "e");
-        (str === "a");
-        (str === "s");
-        (str === "d");
-        (str === "z");
-        (str === "x");
-        (str === "c");
-
-        var audio = document.querySelectorAll('[data-key]');
-        audio.forEach(b => b.play());
+        var audios = document.querySelectorAll('audio[data-key]');
+        audios.forEach(audio =>{
+            if (pressedKey === audio.dataset.key) {
+                audio.play();
+            }
+        });
       }
       window.document.onkeyup = function(event) {
-        let keystroke = event.key.toLowerCase();
+        let pressedKey = event.key.toLowerCase();
 
-        if (button.includes(keystroke)){
-            play(keystroke);
+        if (button.includes(pressedKey)){
+            play(pressedKey);
         }
 
     }
@@ -39,7 +33,7 @@
   <body>
    <div class="title">
     <h1 class="text-center">Simple Drum Machine</h1>
-        <div class="last-used-key display-border" id="display">Push one of the button below!</div>
+        <div class="last-used-key display-border">Push one of the button below!</div>
     </div>
     <div onclick="play('Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C')">
     <button class="btn">
