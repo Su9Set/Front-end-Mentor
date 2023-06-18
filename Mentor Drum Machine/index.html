@@ -5,29 +5,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Drum Machine</title>
 
-    <script>
-      const button = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c']
+    <script src="script.js"></script>
 
-      function play(pressedKey) {
-        document.querySelector('.last-used-key').innerText = pressedKey.toUpperCase();
-        let formattedPressedKey = pressedKey.toLowerCase();
+    <audio src="./clip/war-drum.mp3" id="q" data-key="q"></audio>
+    <audio src="./clip/one-hit-drum.mp3" id="W" data-key="w"></audio>
+    <audio src="./clip/fast-drum.mp3" id="E" data-key="e"></audio>
+    <audio src="./clip/short-blast-drum.mp3" id="A" data-key="a"></audio>
+    <audio src="./clip/pioner-drum.mp3" id="S" data-key="s"></audio>
+    <audio src="./clip/drum-before-performance.mp3" id="D" data-key="d"></audio>
+    <audio src="./clip/march-drum.mp3" id="Z" data-key="z"></audio>
+    <audio src="./clip/battle-drum.mp3" id="X" data-key="x"></audio>
+    <audio src="./clip/single-hit-drum.mp3" id="C" data-key="c"></audio>
 
-        var audios = document.querySelectorAll('audio[data-key]');
-        audios.forEach(audio =>{
-            if (pressedKey === audio.dataset.key) {
-                audio.play();
-            }
-        });
-      }
-      window.document.onkeyup = function(event) {
-        let pressedKey = event.key.toLowerCase();
-
-        if (button.includes(pressedKey)){
-            play(pressedKey);
-        }
-
-    }
-    </script>
   </head>
 
   <body>
@@ -38,39 +27,31 @@
     <div onclick="play('Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C')">
     <button class="btn">
         Q
-    <audio src="./clip/barabannaya-drob-vo-vremya-voennogo-marsha.mp3" id="q" data-key="q"></audio>
+    <audio src="./clip/war-drum.mp3" id="q" data-key="q"></audio>
     </button>
     <button class="btn">
         W
-    <audio src="./clip/barabannyy-zvuk-dlya-otlichnoy-shutki.mp3" id="W" data-key="w"></audio>
     </button>
     <button class="btn">
         E
-    <audio src="./clip/bystraya-igra-na-barabane.mp3" id="E" data-key="e"></audio>
     </button>
     <button class="btn">
         A
-    <audio src="./clip/korotkiy-zvuk-barabannaya-drob.mp3" id="A" data-key="a"></audio>
     </button>
     <button class="btn">
         S
-    <audio src="./clip/melodiya-s-pionerskim-barabanom.mp3" id="S" data-key="s"></audio>
     </button>
     <button class="btn">
         D
-    <audio src="./clip/zvuk-barabannoy-drobi-v-cirke-pered-vystupleniem.mp3" id="D" data-key="d"></audio>
     </button>
     <button class="btn">
         Z
-    <audio src="./clip/zvuk-barabanov-vo-vremya-parada.mp3" id="Z" data-key="z"></audio>
     </button>
     <button class="btn">
         X
-    <audio src="./clip/zvuk-boevogo-barabana-melodiya-pered-atakoy.mp3" id="X" data-key="x"></audio>
     </button>
     <button class="btn">
         C
-    <audio src="./clip/zvuk-odinochnogo-udara-po-barabanu.mp3" id="C" data-key="c"></audio>
     </button>
     </div>
    </div>

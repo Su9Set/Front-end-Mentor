@@ -1,22 +1,31 @@
+body{
+    background: url(background/Drum-background.jpg);
+}
+
 .text-center {
     text-align: center;
     color: whitesmoke;
 }
+
 .last-used-key{
     text-align: center;
     color: whitesmoke;
 }
+
 .display-border {
     border: 5px solid white;
     padding-top: 25px;
     padding-left: 3px;
-    width: 200px; height: 50px;
+    width: 200px;
+    height: 50px;
     text-align: center;
-    margin-left: 38%;
+    margin-left: 42%;
+    margin-right: 50%;
     margin-bottom: 15px;
 }
+
 .btn{
-    margin-left: 45%;
+    margin-left: 47%;
     margin-right: 50%;
     text-align: center;
     margin-bottom: 10px;
@@ -29,12 +38,16 @@
     color: white;
     padding: 8px 16px;
     font-size: 16px;
+    transition: all 0.07s;
 }
+
 .btn:hover{
     border: 5px solid black;
     background: white;
     color: black;
 }
-body{
-    background: url(background/barabany_barabannaia_ustanovka_muzykalnyj_instrument_121556_1920x1080.jpg);
+
+.hover{border: 5px solid black;
+    background: white;
+    color: black;
 }
