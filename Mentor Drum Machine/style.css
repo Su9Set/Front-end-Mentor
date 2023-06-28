@@ -47,7 +47,8 @@ body{
     color: black;
 }
 
-.hover{border: 5px solid black;
+.hover{
+    border: 5px solid black;
     background: white;
     color: black;
 }
